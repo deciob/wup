@@ -12,7 +12,7 @@ define({
 			replace: { module: 'i18n!welcome/strings' },
 			css: { module: 'css!welcome/structure.css' }
 		},
-		insert: { at: 'dom.first!body' }
+		insert: { at: 'dom.first!section.content' }
 	},
 
 	// Wire.js plugins

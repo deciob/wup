@@ -1,14 +1,38 @@
 // ---------------------------------------------------------------------------
 // Imports
 
+@import "normalize";
 @import "base";
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
 
-.container {
-  @include container;
-  @include susy-grid-background;
+.welcome {
+  @include container($total-columns, $break);
+  //@include susy-grid-background;
+
+  @include at-breakpoint($break) {
+    header.welcome-header { 
+      @include prefix(1,$break); 
+      @include suffix(1,$break); 
+    }
+    .main {
+      $main-columns: 5;
+      @include span-columns($main-columns omega, $break);
+      //.content { @include span-columns(7,$main-columns) }
+      //.summary { @include span-columns(3 omega, $main-columns) }
+    }
+  }
+
+  //footer.contentinfo {
+  //  clear: both;
+  //  //margin: 0 0 - $grid-padding;
+  //  //padding: 0 $grid-padding;
+  //  @include at-breakpoint($break) {
+  //    //margin: 0;
+  //    //@include pad(2,3,$break);
+  //  }
+  //}
 }
 
 html {
@@ -16,29 +40,59 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: lighter;
-    color: #222;
+  font-family: "Lato";
+  font-weight: normal;
 
-    transition: opacity 1s ease;
+  transition: opacity 1s ease;
   -webkit-transition: opacity 1s ease;
   -moz-transition: opacity 1s ease;
   -o-transition: opacity 1s ease;
   -ms-transition: opacity 1s ease;
+
+  background-color: $night;
+  color: white;
 }
 
-body {
-    margin: 0;
-    font-size: 1em;
-    line-height: 1.4;
+h1 { 
+  font-size:2.25em;  /* 16x2.25=36 */ 
+  letter-spacing: 0.2em;
+  word-spacing: 0.2em;
+  line-height: 1.4;
+}
+h2 { 
+  font-size:1.5em;   /* 16x1.5=24 */ 
+  letter-spacing: 0.1em;
+  word-spacing: 0.1em;
+  line-height: 1.2;
+}
+h3 { 
+  font-size:1.125em; /* 16x1.125=18 */ 
+  line-height: 1.1;
+}
+p.big { 
+  font-size:0.875em; /* 16x0.875=14 */ 
+  letter-spacing: 0.08em;
+  word-spacing: 0.09em;
+  line-height: 1.1;
+}
+p { font-size:0.75em;  /* 16x0.75=12 */ }
+a {
+  color: white;
 }
 
-h1, h2, h3 {
-    color: #333;
+
+footer.contentinfo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  
+  p {
+    padding: 6px 0;
+  }
 }
 
-h1 {
-    font-weight: bold;
-    font-size: 2em;
-    letter-spacing: -.1ex;
-}
