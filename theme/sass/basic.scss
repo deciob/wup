@@ -1,0 +1,44 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "base";
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+.container {
+  @include container;
+  @include susy-grid-background;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    color: #222;
+
+    transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  -ms-transition: opacity 1s ease;
+}
+
+body {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: -.1ex;
+}
