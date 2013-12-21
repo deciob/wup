@@ -1,5 +1,24 @@
 .welcome-header {
-  margin: 2em auto;
+  margin: 2em 0 auto;
+  padding: 2em 0;
   text-align: center;
 }
+
+.welcome-header h1, .welcome-header h4 {
+  font-weight: 100;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+section.main {
+  font-family: "Merriweather";
+  margin: 3.5em 0;
+  text-align: center;
+}
+
+section.main h2 {
+
+}
+
+
 
