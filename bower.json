@@ -9,7 +9,8 @@
 		"meld": "~1",
 		"poly": "~0.5",
 		"rest": "~0.9",
-		"msgs": "~0.3"
+		"msgs": "~0.3",
+		"d3": "latest"
 	},
 	"ignore": [
 		"node_modules/"

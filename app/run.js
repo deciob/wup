@@ -2,9 +2,16 @@
 
 	var config = {
 		// baseUrl: '',
-		//paths: {
-			// Configure paths here
-		//},
+		paths: {
+      d3: {
+        location: 'lib/d3/d3.js',
+        config: {
+          loader: 'lib/curl/src/curl/loader/legacy',
+          exports: 'd3'
+        }
+      },
+      chart: 'nightcharts.js'
+    },
 		packages: [
 			// Define application-level packages
 			{
@@ -26,13 +33,13 @@
 			{ name: 'msgs', location: 'lib/msgs', main: 'msgs' },
 			{ name: 'when', location: 'lib/when', main: 'when' },
 			{ name: 'meld', location: 'lib/meld', main: 'meld' },
-			{ name: 'poly', location: 'lib/poly' }
+			//{ name: 'poly', location: 'lib/poly' }
 		],
 		// Turn off i18n locale sniffing. Change or remove this line if you want
 		// to test specific locales or try automatic locale-sniffing.
 		locale: false,
 		// Polyfill everything ES5-ish
-		preloads: ['poly/all']
+		//preloads: ['poly/all']
 		// Or, select individual polyfills if you prefer
 		//preloads: ['poly/array', 'poly/function', 'poly/json', 'poly/object', 'poly/string', 'poly/xhr']
 	};
