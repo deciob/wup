@@ -1,7 +1,8 @@
 (function(define) {
   return define([
-    "backbone"
-  ], function(Backbone) {
+    "backbone",
+    "app/views/welcome_view"
+  ], function(Backbone, WelcomeView) {
 
     return Backbone.Router.extend({
       routes: {
@@ -16,7 +17,8 @@
         console.log("initialize");
       },
       welcome: function () {
-        console.log("welcome");
+        var welcome_view = new WelcomeView();
+        welcome_view.render();
       },
       exploreData: function () {
         console.log("explore_data");

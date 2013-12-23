@@ -17,7 +17,7 @@
           exports: '$'
         }
       },
-      chart: 'nightcharts.js',
+      chart: 'app/lib/nightcharts.js',
       backbone: 'lib/backbone/index.js',
       underscore: 'lib/lodash/dist/lodash.js'
     },
@@ -32,7 +32,7 @@
 			// automatigally.
 			// WARNING: The moduleLoader config syntax will be changing in an upcoming version
 			// of curl.
-			{ name: 'theme', location: 'theme/stylesheets/', config: { moduleLoader: 'curl/plugin/css' } },
+			{ name: 'theme', location: 'theme/stylesheets', config: { moduleLoader: 'curl/plugin/css' } },
 
 			// Add third-party packages here
 			{ name: 'curl', location: 'lib/curl/src/curl' },
