@@ -3,14 +3,12 @@
 	"version": "0.2.4",
 	"dependencies": {
 		"curl": "~0.8",
-		"wire": "~0.10",
-		"cola": "~0.1",
 		"when": "~2",
 		"meld": "~1",
-		"poly": "~0.5",
-		"rest": "~0.9",
-		"msgs": "~0.3",
-		"d3": "latest"
+		"d3": "latest",
+		"backbone": "https://raw.github.com/amdjs/backbone/1.1.0/backbone.js",
+		"lodash": "latest",
+		"zepto": "latest"
 	},
 	"ignore": [
 		"node_modules/"

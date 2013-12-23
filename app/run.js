@@ -10,7 +10,16 @@
           exports: 'd3'
         }
       },
-      chart: 'nightcharts.js'
+      jquery: {
+        location: 'lib/zepto/zepto.js',
+        config: {
+          loader: 'lib/curl/src/curl/loader/legacy',
+          exports: '$'
+        }
+      },
+      chart: 'nightcharts.js',
+      backbone: 'lib/backbone/index.js',
+      underscore: 'lib/lodash/dist/lodash.js'
     },
 		packages: [
 			// Define application-level packages
@@ -27,13 +36,8 @@
 
 			// Add third-party packages here
 			{ name: 'curl', location: 'lib/curl/src/curl' },
-			{ name: 'wire', location: 'lib/wire', main: 'wire' },
-			{ name: 'cola', location: 'lib/cola', main: 'cola' },
-			{ name: 'rest', location: 'lib/rest', main: 'rest' },
-			{ name: 'msgs', location: 'lib/msgs', main: 'msgs' },
 			{ name: 'when', location: 'lib/when', main: 'when' },
-			{ name: 'meld', location: 'lib/meld', main: 'meld' },
-			//{ name: 'poly', location: 'lib/poly' }
+			{ name: 'meld', location: 'lib/meld', main: 'meld' }
 		],
 		// Turn off i18n locale sniffing. Change or remove this line if you want
 		// to test specific locales or try automatic locale-sniffing.
@@ -44,7 +48,7 @@
 		//preloads: ['poly/array', 'poly/function', 'poly/json', 'poly/object', 'poly/string', 'poly/xhr']
 	};
 
-	curl(config, ['wire!app/main']).then(success, fail);
+	curl(config, ['app/main']).then(success, fail);
 
 	// Success! curl.js indicates that your app loaded successfully!
 	function success () {
