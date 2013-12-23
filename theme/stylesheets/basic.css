@@ -3,8 +3,8 @@
 /* line 9, ../sass/basic.scss */
 .welcome {
   *zoom: 1;
-  max-width: 48em;
-  _width: 48em;
+  max-width: 34em;
+  _width: 34em;
   padding-left: 1em;
   padding-right: 1em;
   margin-left: auto;
@@ -16,27 +16,22 @@
   display: table;
   clear: both;
 }
-@media (min-width: 83em) {
+@media (min-width: 59em) {
   /* line 9, ../sass/basic.scss */
   .welcome {
-    max-width: 83em;
+    max-width: 59em;
   }
 }
-@media (min-width: 83em) {
+@media (min-width: 40em) {
   /* line 14, ../sass/basic.scss */
-  .welcome header.welcome-header {
-    padding-left: 8.43373%;
-    padding-right: 8.43373%;
-  }
-  /* line 18, ../sass/basic.scss */
   .welcome .main {
-    width: 49.39759%;
+    width: 49.15254%;
     float: right;
     margin-right: 0;
   }
 }
 
-/* line 37, ../sass/basic.scss */
+/* line 21, ../sass/basic.scss */
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
@@ -52,25 +47,25 @@ html {
   color: white;
 }
 
-/* line 56, ../sass/basic.scss */
+/* line 40, ../sass/basic.scss */
 h1 {
   font-size: 3em;
   /* 16x2.25=36 */
-  letter-spacing: 0.15em;
-  word-spacing: 0.2em;
+  letter-spacing: 0.10em;
+  word-spacing: 0.15em;
   line-height: 1.4;
 }
 
-/* line 62, ../sass/basic.scss */
+/* line 46, ../sass/basic.scss */
 h2 {
   font-size: 2.25em;
   /* 16x2.25=36 */
-  letter-spacing: 0.15em;
-  word-spacing: 0.2em;
+  letter-spacing: 0.10em;
+  word-spacing: 0.15em;
   line-height: 1.4;
 }
 
-/* line 68, ../sass/basic.scss */
+/* line 52, ../sass/basic.scss */
 h3 {
   font-size: 1.5em;
   /* 16x1.5=24 */
@@ -79,7 +74,7 @@ h3 {
   line-height: 1.2;
 }
 
-/* line 74, ../sass/basic.scss */
+/* line 58, ../sass/basic.scss */
 h4 {
   font-size: 1.125em;
   /* 16x1.125=18 */
@@ -88,7 +83,7 @@ h4 {
   line-height: 1.1;
 }
 
-/* line 80, ../sass/basic.scss */
+/* line 64, ../sass/basic.scss */
 p.big {
   font-size: 0.875em;
   /* 16x0.875=14 */
@@ -97,7 +92,7 @@ p.big {
   line-height: 1.1;
 }
 
-/* line 86, ../sass/basic.scss */
+/* line 70, ../sass/basic.scss */
 p {
   font-size: 0.75em;
   /* 16x0.75=12 */
@@ -106,24 +101,23 @@ p {
   line-height: 1.1;
 }
 
-/* line 92, ../sass/basic.scss */
+/* line 76, ../sass/basic.scss */
 a {
   color: white;
   text-decoration: none;
 }
 
-/* line 98, ../sass/basic.scss */
+/* line 82, ../sass/basic.scss */
 footer.contentinfo {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 150px;
-  background: #333333;
+  height: 50px;
   color: #FFFFFF;
   text-align: center;
 }
-/* line 108, ../sass/basic.scss */
+/* line 92, ../sass/basic.scss */
 footer.contentinfo p {
   padding: 6px 0;
 }

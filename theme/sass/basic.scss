@@ -10,28 +10,12 @@
   @include container($total-columns, $break);
   //@include susy-grid-background;
 
-  @include at-breakpoint($break) {
-    header.welcome-header { 
-      @include prefix(1,$break); 
-      @include suffix(1,$break); 
-    }
+  @include at-breakpoint(40em $break) {
     .main {
-      $main-columns: 6;
-      @include span-columns($main-columns omega, $break);
-      //.content { @include span-columns(7,$main-columns) }
-      //.summary { @include span-columns(3 omega, $main-columns) }
+      @include span-columns($break/2 omega, $break);
     }
   }
 
-  //footer.contentinfo {
-  //  clear: both;
-  //  //margin: 0 0 - $grid-padding;
-  //  //padding: 0 $grid-padding;
-  //  @include at-breakpoint($break) {
-  //    //margin: 0;
-  //    //@include pad(2,3,$break);
-  //  }
-  //}
 }
 
 html {
@@ -55,14 +39,14 @@ html {
 
 h1 { 
   font-size:3em;  /* 16x2.25=36 */ 
-  letter-spacing: 0.15em;
-  word-spacing: 0.2em;
+  letter-spacing: 0.10em;
+  word-spacing: 0.15em;
   line-height: 1.4;
 }
 h2 { 
   font-size:2.25em;  /* 16x2.25=36 */ 
-  letter-spacing: 0.15em;
-  word-spacing: 0.2em;
+  letter-spacing: 0.10em;
+  word-spacing: 0.15em;
   line-height: 1.4;
 }
 h3 { 
@@ -100,8 +84,8 @@ footer.contentinfo {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 150px;
-  background: #333333;
+  height: 50px;
+  //background: #333333;
   color: #FFFFFF;
   text-align: center;
 
