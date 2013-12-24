@@ -22,11 +22,9 @@
         console.log("gooooooo!");
       },
     
-      // Re-render the title of the todo item.
       render: function () {
         console.log("rendering!!!!!!");
         this.$el.html( this.todoTpl() );
-        return this;
       },
 
       exploreData: function () {

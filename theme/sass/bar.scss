@@ -1,0 +1,32 @@
+
+svg {
+  /*font-family: 'PT Mono', sans-serif;
+  font-size: 1.5em;*/
+  font: normal 13px/54px "pt mono";
+  letter-spacing: 3px;
+}
+
+text {
+  fill: white;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: #EFEFEF;
+  /*fill: #ea6e4c;*/
+  fill-opacity: .9;
+}
+
+.bar.active {
+  fill: darkRed;
+}
+
+.x.axis path {
+  display: none;
+}
