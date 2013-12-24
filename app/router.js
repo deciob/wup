@@ -1,8 +1,9 @@
 (function(define) {
   return define([
     "backbone",
+    "app/views/base_view",
     "app/views/welcome_view"
-  ], function(Backbone, WelcomeView) {
+  ], function(Backbone, BaseView, WelcomeView) {
 
     return Backbone.Router.extend({
       routes: {
@@ -14,18 +15,32 @@
         
       },
       initialize: function() {
-        console.log("initialize");
+        this.base_view = new BaseView();
+        this.current_view = void 0;
       },
       welcome: function () {
-        var welcome_view = new WelcomeView();
-        welcome_view.render();
+        this.removePrevView();
+        this.current_view = new WelcomeView();
+        this.renderCurrentView();
       },
       exploreData: function () {
-        console.log("explore_data");
+        this.removePrevView();
+        //this.current_view = new WelcomeView();
+        //_renderCurrentView();
       },
       tellStory: function () {
         console.log("tell_story");
       },
+
+      removePrevView: function () {
+        if (this.current_view) {
+          this.current_view.close();
+        }
+      },
+      renderCurrentView: function () {
+        this.current_view.render();
+        this.base_view.render(this.current_view);
+      }
   });
 
   });

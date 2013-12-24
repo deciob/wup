@@ -1,30 +1,41 @@
 (function(define) {
   return define([
-    "backbone", 
-  ], function(Backbone) {
+    "backbone",
+    "text!app/templates/welcome_template.html"
+  ], function(Backbone, template) {
 
     return Backbone.View.extend({
 
-      el: '#app',
+      //el: '#app',
     
       // Cache the template function for a single item.
-      todoTpl: _.template( "<div>Welcome!</div>" ),
+      todoTpl: _.template( template ),
     
       events: {
+        'click #explore_data': 'exploreData'
         //'dblclick label': 'edit',
         //'keypress .edit': 'updateOnEnter',
         //'blur .edit':   'close'
       },
 
-      initialize: function() {
+      initialize: function () {
         console.log("gooooooo!");
       },
     
       // Re-render the title of the todo item.
-      render: function() {
+      render: function () {
+        console.log("rendering!!!!!!");
         this.$el.html( this.todoTpl() );
         return this;
       },
+
+      exploreData: function () {
+        Backbone.history.navigate("explore_data", {trigger: true});
+      },
+
+      onClose: function () {
+        console.log("removing!!!!!");
+      }
     
     });
 

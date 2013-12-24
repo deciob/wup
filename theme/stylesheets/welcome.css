@@ -1,0 +1,19 @@
+/* line 3, ../sass/welcome.scss */
+.welcome .welcome-header {
+  margin: 2em auto;
+  padding: 3em 0;
+  text-align: center;
+}
+/* line 9, ../sass/welcome.scss */
+.welcome .welcome-header h1, .welcome .welcome-header h4 {
+  font-weight: 100;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+/* line 15, ../sass/welcome.scss */
+.welcome section.main {
+  font-family: "Merriweather";
+  margin: 3.5em 0;
+  text-align: center;
+  opacity: 0.9;
+}

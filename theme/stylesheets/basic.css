@@ -112,7 +112,27 @@ a {
   text-decoration: none;
 }
 
-/* line 98, ../sass/basic.scss */
+/* line 3, ../sass/welcome.scss */
+.welcome .welcome-header {
+  margin: 2em auto;
+  padding: 3em 0;
+  text-align: center;
+}
+/* line 9, ../sass/welcome.scss */
+.welcome .welcome-header h1, .welcome .welcome-header h4 {
+  font-weight: 100;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+/* line 15, ../sass/welcome.scss */
+.welcome section.main {
+  font-family: "Merriweather";
+  margin: 3.5em 0;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* line 100, ../sass/basic.scss */
 footer.contentinfo {
   position: absolute;
   left: 0;
@@ -123,7 +143,7 @@ footer.contentinfo {
   color: #FFFFFF;
   text-align: center;
 }
-/* line 108, ../sass/basic.scss */
+/* line 110, ../sass/basic.scss */
 footer.contentinfo p {
   padding: 6px 0;
 }
