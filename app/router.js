@@ -4,10 +4,11 @@
     "underscore",
     "when", 
     "backbone",
+    'app/models/application_state',
     "app/views/base_view",
     "app/views/welcome_view",
-    "app/views/explore_data_view"
-  ], function(d3, _, when, Backbone, BaseView, WelcomeView, ExploreDataView) {
+    "app/views/explore_data/explore_data_view"
+  ], function(d3, _, when, Backbone, ApplicationState, BaseView, WelcomeView, ExploreDataView) {
 
     return Backbone.Router.extend({
       routes: {
@@ -21,8 +22,13 @@
       initialize: function() {
         this.defer = when.defer();
         this.promised_data = this.fetchData();
+        this.application_state = new ApplicationState({year: 1950});
         this.base_view = new BaseView();
         this.current_view = void 0;
+        this.config = {
+          application_state: this.application_state,
+          promised_data: this.promised_data
+        }
       },
       welcome: function () {
         this.removePrevView();
@@ -31,7 +37,7 @@
       },
       exploreData: function () {
         this.removePrevView();
-        this.current_view = new ExploreDataView(this.promised_data);
+        this.current_view = new ExploreDataView(this.config);
         this.renderCurrentView();
       },
       tellStory: function () {

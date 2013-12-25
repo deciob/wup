@@ -18,21 +18,35 @@
     .main {
       $main-columns: 6;
       @include span-columns($main-columns omega, $break);
-      //.content { @include span-columns(7,$main-columns) }
-      //.summary { @include span-columns(3 omega, $main-columns) }
     }
   }
-
-  //footer.contentinfo {
-  //  clear: both;
-  //  //margin: 0 0 - $grid-padding;
-  //  //padding: 0 $grid-padding;
-  //  @include at-breakpoint($break) {
-  //    //margin: 0;
-  //    //@include pad(2,3,$break);
-  //  }
-  //}
 }
+
+#explore_data {
+  @include container($total-columns, $break);
+  //@include susy-grid-background;
+
+  @include at-breakpoint($break) {
+    .title { 
+      @include prefix(1,$break); 
+      @include suffix(1,$break); 
+    }
+    #viz {
+      $main-columns: 8;
+      @include span-columns($main-columns, $break);
+    }
+    #year {
+      $main-columns: 4;
+      @include span-columns($main-columns omega, $break);
+    }
+    #controls {
+      $main-columns: 4;
+      @include span-columns($main-columns omega, $break);
+    }
+  }
+}
+
+
 
 html {
   font-size: 100%;
@@ -95,7 +109,7 @@ a {
 }
 
 @import "welcome";
-@import "bar";
+@import "explore_data";
 
 
 footer.contentinfo {

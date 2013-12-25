@@ -12,7 +12,7 @@
       todoTpl: _.template( template ),
     
       events: {
-        'click #explore_data': 'exploreData'
+        'click #explore_data_selector': 'exploreData'
         //'dblclick label': 'edit',
         //'keypress .edit': 'updateOnEnter',
         //'blur .edit':   'close'

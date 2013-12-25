@@ -1,0 +1,29 @@
+
+@import "bar";
+
+
+
+#year {
+  //height: 350px;
+  h1 {
+    font-size: 5em;
+  }
+}
+
+
+#explore_data {
+  #controls {
+    i.selected {
+      color: #fb8d2b;
+    }
+    i.inactive {
+      opacity: 0.1;
+    }
+  }
+  .controls {
+    //border: dotted 1px white;
+    margin: 0.4em;
+    cursor: pointer; 
+    cursor: hand;
+  }
+}

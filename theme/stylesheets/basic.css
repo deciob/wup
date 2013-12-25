@@ -36,7 +36,55 @@
   }
 }
 
-/* line 37, ../sass/basic.scss */
+/* line 25, ../sass/basic.scss */
+#explore_data {
+  *zoom: 1;
+  max-width: 48em;
+  _width: 48em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#explore_data:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 83em) {
+  /* line 25, ../sass/basic.scss */
+  #explore_data {
+    max-width: 83em;
+  }
+}
+@media (min-width: 83em) {
+  /* line 30, ../sass/basic.scss */
+  #explore_data .title {
+    padding-left: 8.43373%;
+    padding-right: 8.43373%;
+  }
+  /* line 34, ../sass/basic.scss */
+  #explore_data #viz {
+    width: 66.26506%;
+    float: left;
+    margin-right: 1.20482%;
+  }
+  /* line 38, ../sass/basic.scss */
+  #explore_data #year {
+    width: 32.53012%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 42, ../sass/basic.scss */
+  #explore_data #controls {
+    width: 32.53012%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 51, ../sass/basic.scss */
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
@@ -52,7 +100,7 @@ html {
   color: white;
 }
 
-/* line 56, ../sass/basic.scss */
+/* line 70, ../sass/basic.scss */
 h1 {
   font-size: 3em;
   /* 16x2.25=36 */
@@ -61,7 +109,7 @@ h1 {
   line-height: 1.4;
 }
 
-/* line 62, ../sass/basic.scss */
+/* line 76, ../sass/basic.scss */
 h2 {
   font-size: 2.25em;
   /* 16x2.25=36 */
@@ -70,7 +118,7 @@ h2 {
   line-height: 1.4;
 }
 
-/* line 68, ../sass/basic.scss */
+/* line 82, ../sass/basic.scss */
 h3 {
   font-size: 1.5em;
   /* 16x1.5=24 */
@@ -79,7 +127,7 @@ h3 {
   line-height: 1.2;
 }
 
-/* line 74, ../sass/basic.scss */
+/* line 88, ../sass/basic.scss */
 h4 {
   font-size: 1.125em;
   /* 16x1.125=18 */
@@ -88,7 +136,7 @@ h4 {
   line-height: 1.1;
 }
 
-/* line 80, ../sass/basic.scss */
+/* line 94, ../sass/basic.scss */
 p.big {
   font-size: 0.875em;
   /* 16x0.875=14 */
@@ -97,7 +145,7 @@ p.big {
   line-height: 1.1;
 }
 
-/* line 86, ../sass/basic.scss */
+/* line 100, ../sass/basic.scss */
 p {
   font-size: 0.75em;
   /* 16x0.75=12 */
@@ -106,7 +154,7 @@ p {
   line-height: 1.1;
 }
 
-/* line 92, ../sass/basic.scss */
+/* line 106, ../sass/basic.scss */
 a {
   color: white;
   text-decoration: none;
@@ -170,7 +218,27 @@ text {
   display: none;
 }
 
-/* line 101, ../sass/basic.scss */
+/* line 8, ../sass/explore_data.scss */
+#year h1 {
+  font-size: 5em;
+}
+
+/* line 16, ../sass/explore_data.scss */
+#explore_data #controls i.selected {
+  color: #fb8d2b;
+}
+/* line 19, ../sass/explore_data.scss */
+#explore_data #controls i.inactive {
+  opacity: 0.1;
+}
+/* line 23, ../sass/explore_data.scss */
+#explore_data .controls {
+  margin: 0.4em;
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 115, ../sass/basic.scss */
 footer.contentinfo {
   position: absolute;
   left: 0;
@@ -181,7 +249,7 @@ footer.contentinfo {
   color: #FFFFFF;
   text-align: center;
 }
-/* line 111, ../sass/basic.scss */
+/* line 125, ../sass/basic.scss */
 footer.contentinfo p {
   padding: 6px 0;
 }

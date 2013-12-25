@@ -1,0 +1,57 @@
+/* line 2, ../sass/bar.scss */
+svg {
+  /*font-family: 'PT Mono', sans-serif;
+  font-size: 1.5em;*/
+  font: normal 13px/54px "pt mono";
+  letter-spacing: 3px;
+}
+
+/* line 9, ../sass/bar.scss */
+text {
+  fill: white;
+}
+
+/* line 14, ../sass/bar.scss */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+/* line 20, ../sass/bar.scss */
+.bar {
+  fill: #EFEFEF;
+  /*fill: #ea6e4c;*/
+  fill-opacity: .9;
+}
+
+/* line 26, ../sass/bar.scss */
+.bar.active {
+  fill: darkRed;
+}
+
+/* line 30, ../sass/bar.scss */
+.x.axis path {
+  display: none;
+}
+
+/* line 8, ../sass/explore_data.scss */
+#year h1 {
+  font-size: 5em;
+}
+
+/* line 16, ../sass/explore_data.scss */
+#explore_data #controls i.selected {
+  color: #fb8d2b;
+}
+/* line 19, ../sass/explore_data.scss */
+#explore_data #controls i.inactive {
+  opacity: 0.1;
+}
+/* line 23, ../sass/explore_data.scss */
+#explore_data .controls {
+  margin: 0.4em;
+  cursor: pointer;
+  cursor: hand;
+}
