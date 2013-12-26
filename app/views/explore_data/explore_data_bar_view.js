@@ -22,18 +22,28 @@ define([
   
     render: function (data) {
       var self=this, data_by_year, selection, barchart, transition_config, 
-        transition;
+        transition, year_step=5;
 
+      // TODO: probably this data and related helpers would be better 
+      // positioned inside a collection.
       data_by_year = _.groupBy( data, function (obj) {
         return obj.year;
       });
+      function itHasNext (year) {
+        return data_by_year[year + year_step];
+      }
+      function itHasPrev (year) {
+        return data_by_year[year - year_step];
+      }
+
+      // TODO: rationalize chart/transition configs (also on nightcharts)
       selection = d3.select('#viz');
       barchart = chart.bar()
         .margin({top: 10, right: 20, bottom: 20, left: 240})
         .width(900)
         .height(700)
-        .duration(500)
-        .step(400)
+        .duration(600)
+        .step(600)
         .max(40)
         .xValue( function(d) { return d['agglomeration']; } )
         .yValue( function(d) { return d['population']; } )
@@ -43,7 +53,7 @@ define([
         data: data_by_year,
         chart: barchart,
         position: this.application_state.get('year'),
-        step: 5
+        step: year_step
       };
       transition = new chart.TransitionTrain(transition_config);
 
@@ -63,19 +73,27 @@ define([
         transition.dispatch.reset.call(transition);
       });      
 
-      
-      // FIXME!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      transition.dispatch.on('end', function() {
-        self.application_state.set('year', transition.position);
-        if (transition.state_machine.getStatus() === 'in_pause') {
+      transition.dispatch.on('at_beginning_of_transition.explore_data', 
+       function() {
+        var year = transition.position;
+        if ( self.application_state.get('year') !== year ) {
+          self.application_state.set('year', year);
+        }
+      });
+
+      transition.dispatch.on('end.explore_data', function() {
+        var year = transition.position,
+          status = transition.state_machine.getStatus();
+
+        if (status === 'in_pause') {
           self.application_state.set({
             'play': 'active',
             'stop': 'selected',
-            'step_backward': 'active',
-            'step_forward': 'active',
-            'reload': 'active',
+            'step_backward': itHasPrev(year) ? 'active' : 'inactive',
+            'step_forward': itHasNext(year) ? 'active' : 'inactive',
+            'reload': itHasPrev(year) ? 'active' : 'inactive',
           });
-        } else if (transition.state_machine.getStatus() === 'in_transition_start') {
+        } else if (status === 'in_transition_start') {
           self.application_state.set({
             'play': 'selected',
             'stop': 'active',
@@ -83,19 +101,19 @@ define([
             'step_forward': 'inactive',
             'reload': 'inactive',
           });
-        } else if (transition.state_machine.getStatus() === 'in_transition_next') {
+        } else if (status === 'in_transition_next') {
           self.application_state.set({
             'play': 'inactive',
             'stop': 'inactive',
             'step_backward': 'inactive',
-            'step_forward': 'active',
+            'step_forward': 'selected',
             'reload': 'inactive',
           });
-        } else if (transition.state_machine.getStatus() === 'in_transition_prev') {
+        } else if (status === 'in_transition_prev') {
           self.application_state.set({
             'play': 'inactive',
             'stop': 'inactive',
-            'step_backward': 'active',
+            'step_backward': 'selected',
             'step_forward': 'inactive',
             'reload': 'inactive',
           });
@@ -106,7 +124,11 @@ define([
     },
 
     onClose: function () {
-      console.log('removing explore_data_bar_view !!!!!');
+      this.mediator.off('step_backward');
+      this.mediator.off('play');
+      this.mediator.off('stop');
+      this.mediator.off('step_forward');
+      this.mediator.off('reload');
     }
   
   });

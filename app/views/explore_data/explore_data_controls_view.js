@@ -102,6 +102,10 @@ define([
         this.mediator.trigger('reload');
         this.render();
       }
+    },
+
+    onClose: function () {
+      this.mediator.off('state_machine_change');
     }
 
   });
