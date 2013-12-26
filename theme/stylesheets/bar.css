@@ -2,16 +2,17 @@
 svg {
   /*font-family: 'PT Mono', sans-serif;
   font-size: 1.5em;*/
-  font: normal 13px/54px "pt mono";
+  font: normal 14px/54px "pt mono";
   letter-spacing: 3px;
+  word-spacing: -0.3em;
 }
 
-/* line 9, ../sass/bar.scss */
+/* line 10, ../sass/bar.scss */
 text {
   fill: white;
 }
 
-/* line 14, ../sass/bar.scss */
+/* line 16, ../sass/bar.scss */
 .axis path,
 .axis line {
   fill: none;
@@ -19,19 +20,19 @@ text {
   shape-rendering: crispEdges;
 }
 
-/* line 20, ../sass/bar.scss */
+/* line 22, ../sass/bar.scss */
 .bar {
   fill: #EFEFEF;
   /*fill: #ea6e4c;*/
-  fill-opacity: .9;
+  fill-opacity: .8;
 }
 
-/* line 26, ../sass/bar.scss */
+/* line 28, ../sass/bar.scss */
 .bar.active {
   fill: darkRed;
 }
 
-/* line 30, ../sass/bar.scss */
+/* line 32, ../sass/bar.scss */
 .x.axis path {
   display: none;
 }

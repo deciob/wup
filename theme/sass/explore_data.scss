@@ -1,27 +1,37 @@
 
 @import "bar";
 
-
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin: 60px 0;
+  //h2 {
+  //  font-family: "lato";
+  //  font-weight: 300;
+  //}
+}
 
 #year {
-  //height: 350px;
+  opacity: 0.9;
   h1 {
+    font-family: "lato";
     font-size: 5em;
   }
 }
 
 
 #explore_data {
+  opacity: 0.9;
   #controls {
     i.selected {
-      color: #fb8d2b;
+      color: #197486;
     }
     i.inactive {
-      opacity: 0.1;
+      opacity: 0.2;
     }
   }
   .controls {
-    //border: dotted 1px white;
     margin: 0.4em;
     cursor: pointer; 
     cursor: hand;

@@ -12,6 +12,7 @@ define([
     tpl: _.template( template ),
 
     initialize: function(config) {
+      this.config = config;
       this.bar = new ExploreDataBarView(config);
       this.info_panel = new ExploreDataInfoPanelView(config);
     },

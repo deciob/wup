@@ -1,6 +1,7 @@
 define([
+  'underscore',
   'backbone'
-], function(Backbone) {
+], function(_, Backbone) {
   'use strict';
 
   return Backbone.Model.extend({
@@ -17,7 +18,10 @@ define([
 
     },
 
-
+    reset: function(initial_year) {
+      var values = _.assign(this.defaults, {year: initial_year});
+      this.set(values);
+    }
 
   });
 

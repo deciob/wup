@@ -30,10 +30,10 @@ define([
       selection = d3.select('#viz');
       barchart = chart.bar()
         .margin({top: 10, right: 20, bottom: 20, left: 240})
-        .width(700)
+        .width(900)
         .height(700)
-        .duration(600)
-        .step(200)
+        .duration(500)
+        .step(400)
         .max(40)
         .xValue( function(d) { return d['agglomeration']; } )
         .yValue( function(d) { return d['population']; } )

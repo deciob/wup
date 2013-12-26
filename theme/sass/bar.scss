@@ -2,12 +2,14 @@
 svg {
   /*font-family: 'PT Mono', sans-serif;
   font-size: 1.5em;*/
-  font: normal 13px/54px "pt mono";
+  font: normal 14px/54px "pt mono";
   letter-spacing: 3px;
+  word-spacing: -0.3em;
 }
 
 text {
   fill: white;
+  //fill-opacity: .9;
 }
 
 .axis path,
@@ -20,7 +22,7 @@ text {
 .bar {
   fill: #EFEFEF;
   /*fill: #ea6e4c;*/
-  fill-opacity: .9;
+  fill-opacity: .8;
 }
 
 .bar.active {

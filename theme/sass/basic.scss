@@ -25,24 +25,30 @@
 #explore_data {
   @include container($total-columns, $break);
   //@include susy-grid-background;
+  #year, #controls {text-align: left;}
 
   @include at-breakpoint($break) {
+    #year, #controls {text-align: right;}
     .title { 
-      @include prefix(1,$break); 
-      @include suffix(1,$break); 
+      @include prefix(2,$break); 
+      @include suffix(2,$break); 
     }
     #viz {
       $main-columns: 8;
       @include span-columns($main-columns, $break);
     }
-    #year {
+    #info_panel {
       $main-columns: 4;
       @include span-columns($main-columns omega, $break);
     }
-    #controls {
-      $main-columns: 4;
-      @include span-columns($main-columns omega, $break);
-    }
+    //#year {
+    //  $main-columns: 4;
+    //  @include span-columns($main-columns omega, $break);
+    //}
+    //#controls {
+    //  $main-columns: 4;
+    //  @include span-columns($main-columns omega, $break);
+    //}
   }
 }
 
@@ -53,7 +59,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 
-  font-family: "PT+Mono";
+  font-family: "Play";
   font-weight: 300;
 
   transition: opacity 1s ease;
@@ -81,8 +87,8 @@ h2 {
 }
 h3 { 
   font-size:1.5em;   /* 16x1.5=24 */ 
-  letter-spacing: 0.1em;
-  word-spacing: 0.1em;
+  letter-spacing: 0.15em;
+  word-spacing: 0.15em;
   line-height: 1.2;
 }
 h4 { 

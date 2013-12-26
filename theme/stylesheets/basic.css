@@ -58,49 +58,51 @@
     max-width: 83em;
   }
 }
+/* line 28, ../sass/basic.scss */
+#explore_data #year, #explore_data #controls {
+  text-align: left;
+}
 @media (min-width: 83em) {
-  /* line 30, ../sass/basic.scss */
-  #explore_data .title {
-    padding-left: 8.43373%;
-    padding-right: 8.43373%;
+  /* line 31, ../sass/basic.scss */
+  #explore_data #year, #explore_data #controls {
+    text-align: right;
   }
-  /* line 34, ../sass/basic.scss */
+  /* line 32, ../sass/basic.scss */
+  #explore_data .title {
+    padding-left: 16.86747%;
+    padding-right: 16.86747%;
+  }
+  /* line 36, ../sass/basic.scss */
   #explore_data #viz {
     width: 66.26506%;
     float: left;
     margin-right: 1.20482%;
   }
-  /* line 38, ../sass/basic.scss */
-  #explore_data #year {
-    width: 32.53012%;
-    float: right;
-    margin-right: 0;
-  }
-  /* line 42, ../sass/basic.scss */
-  #explore_data #controls {
+  /* line 40, ../sass/basic.scss */
+  #explore_data #info_panel {
     width: 32.53012%;
     float: right;
     margin-right: 0;
   }
 }
 
-/* line 51, ../sass/basic.scss */
+/* line 57, ../sass/basic.scss */
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: "PT+Mono";
+  font-family: "Play";
   font-weight: 300;
   transition: opacity 1s ease;
   -webkit-transition: opacity 1s ease;
   -moz-transition: opacity 1s ease;
   -o-transition: opacity 1s ease;
   -ms-transition: opacity 1s ease;
-  background-color: #333333;
+  background-color: #782206;
   color: white;
 }
 
-/* line 70, ../sass/basic.scss */
+/* line 76, ../sass/basic.scss */
 h1 {
   font-size: 3em;
   /* 16x2.25=36 */
@@ -109,7 +111,7 @@ h1 {
   line-height: 1.4;
 }
 
-/* line 76, ../sass/basic.scss */
+/* line 82, ../sass/basic.scss */
 h2 {
   font-size: 2.25em;
   /* 16x2.25=36 */
@@ -118,16 +120,16 @@ h2 {
   line-height: 1.4;
 }
 
-/* line 82, ../sass/basic.scss */
+/* line 88, ../sass/basic.scss */
 h3 {
   font-size: 1.5em;
   /* 16x1.5=24 */
-  letter-spacing: 0.1em;
-  word-spacing: 0.1em;
+  letter-spacing: 0.15em;
+  word-spacing: 0.15em;
   line-height: 1.2;
 }
 
-/* line 88, ../sass/basic.scss */
+/* line 94, ../sass/basic.scss */
 h4 {
   font-size: 1.125em;
   /* 16x1.125=18 */
@@ -136,7 +138,7 @@ h4 {
   line-height: 1.1;
 }
 
-/* line 94, ../sass/basic.scss */
+/* line 100, ../sass/basic.scss */
 p.big {
   font-size: 0.875em;
   /* 16x0.875=14 */
@@ -145,7 +147,7 @@ p.big {
   line-height: 1.1;
 }
 
-/* line 100, ../sass/basic.scss */
+/* line 106, ../sass/basic.scss */
 p {
   font-size: 0.75em;
   /* 16x0.75=12 */
@@ -154,7 +156,7 @@ p {
   line-height: 1.1;
 }
 
-/* line 106, ../sass/basic.scss */
+/* line 112, ../sass/basic.scss */
 a {
   color: white;
   text-decoration: none;
@@ -184,16 +186,17 @@ a {
 svg {
   /*font-family: 'PT Mono', sans-serif;
   font-size: 1.5em;*/
-  font: normal 13px/54px "pt mono";
+  font: normal 14px/54px "pt mono";
   letter-spacing: 3px;
+  word-spacing: -0.3em;
 }
 
-/* line 9, ../sass/bar.scss */
+/* line 10, ../sass/bar.scss */
 text {
   fill: white;
 }
 
-/* line 14, ../sass/bar.scss */
+/* line 16, ../sass/bar.scss */
 .axis path,
 .axis line {
   fill: none;
@@ -201,44 +204,61 @@ text {
   shape-rendering: crispEdges;
 }
 
-/* line 20, ../sass/bar.scss */
+/* line 22, ../sass/bar.scss */
 .bar {
   fill: #EFEFEF;
   /*fill: #ea6e4c;*/
-  fill-opacity: .9;
+  fill-opacity: .8;
 }
 
-/* line 26, ../sass/bar.scss */
+/* line 28, ../sass/bar.scss */
 .bar.active {
   fill: darkRed;
 }
 
-/* line 30, ../sass/bar.scss */
+/* line 32, ../sass/bar.scss */
 .x.axis path {
   display: none;
 }
 
-/* line 8, ../sass/explore_data.scss */
+/* line 4, ../sass/explore_data.scss */
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin: 60px 0;
+}
+
+/* line 15, ../sass/explore_data.scss */
+#year {
+  opacity: 0.9;
+}
+/* line 17, ../sass/explore_data.scss */
 #year h1 {
+  font-family: "lato";
   font-size: 5em;
 }
 
-/* line 16, ../sass/explore_data.scss */
+/* line 24, ../sass/explore_data.scss */
+#explore_data {
+  opacity: 0.9;
+}
+/* line 27, ../sass/explore_data.scss */
 #explore_data #controls i.selected {
-  color: #fb8d2b;
+  color: #197486;
 }
-/* line 19, ../sass/explore_data.scss */
+/* line 30, ../sass/explore_data.scss */
 #explore_data #controls i.inactive {
-  opacity: 0.1;
+  opacity: 0.2;
 }
-/* line 23, ../sass/explore_data.scss */
+/* line 34, ../sass/explore_data.scss */
 #explore_data .controls {
   margin: 0.4em;
   cursor: pointer;
   cursor: hand;
 }
 
-/* line 115, ../sass/basic.scss */
+/* line 121, ../sass/basic.scss */
 footer.contentinfo {
   position: absolute;
   left: 0;
@@ -249,7 +269,7 @@ footer.contentinfo {
   color: #FFFFFF;
   text-align: center;
 }
-/* line 125, ../sass/basic.scss */
+/* line 131, ../sass/basic.scss */
 footer.contentinfo p {
   padding: 6px 0;
 }
