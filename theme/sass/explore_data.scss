@@ -1,15 +1,25 @@
 
 @import "bar";
 
+header.explore_data {
+  padding-bottom: 180px;
+}
+
+header {
+  .application_controls {
+    // TODO: this looks a hack! Used to align the icons to the title!
+    padding: 35px 0;
+    text-align: center;
+  }
+  i:hover {
+    color: $contrast_colour;
+  }
+}
+
 .title {
   text-align: center;
   text-transform: uppercase;
   opacity: 0.8;
-  margin: 60px 0;
-  //h2 {
-  //  font-family: "lato";
-  //  font-weight: 300;
-  //}
 }
 
 #year {
@@ -20,15 +30,21 @@
   }
 }
 
-
 #explore_data {
-  opacity: 0.9;
-  #controls {
+  #viz_controls {
     i.selected {
-      color: #197486;
+      color: $contrast_colour;
+      opacity: 1;
+    }
+    i.active {
+      opacity: 0.4;
     }
     i.inactive {
-      opacity: 0.2;
+      opacity: 0.1;
+    }
+    i.active:hover {
+      color: $contrast_colour;
+      opacity: 0.8;
     }
   }
   .controls {

@@ -7,7 +7,7 @@ define([
 
   return Backbone.View.extend({
 
-    id: 'controls',
+    id: 'viz_controls',
 
     tpl: _.template( template ),
 

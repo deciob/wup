@@ -20,9 +20,8 @@ text {
 }
 
 .bar {
-  fill: #EFEFEF;
-  /*fill: #ea6e4c;*/
-  fill-opacity: .8;
+  fill: $cream;
+  fill-opacity: .9;
 }
 
 .bar.active {

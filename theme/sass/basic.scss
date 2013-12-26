@@ -2,6 +2,7 @@
 // Imports
 
 @import "base";
+@import "_colours";
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
@@ -25,12 +26,16 @@
 #explore_data {
   @include container($total-columns, $break);
   //@include susy-grid-background;
-  #year, #controls {text-align: left;}
+  #year, #viz_controls {text-align: left;}
 
   @include at-breakpoint($break) {
-    #year, #controls {text-align: right;}
+    #year, #viz_controls {text-align: right;}
+    .application_controls {
+      @include span-columns(1, $break);
+    }
     .title { 
-      @include prefix(2,$break); 
+      @include span-columns(8 omega, $break);
+      @include prefix(1,$break); 
       @include suffix(2,$break); 
     }
     #viz {
@@ -41,14 +46,6 @@
       $main-columns: 4;
       @include span-columns($main-columns omega, $break);
     }
-    //#year {
-    //  $main-columns: 4;
-    //  @include span-columns($main-columns omega, $break);
-    //}
-    //#controls {
-    //  $main-columns: 4;
-    //  @include span-columns($main-columns omega, $break);
-    //}
   }
 }
 
@@ -68,8 +65,15 @@ html {
   -o-transition: opacity 1s ease;
   -ms-transition: opacity 1s ease;
 
-  background-color: $night;
+  background-color: $orange;
   color: white;
+
+  .link {
+    cursor: pointer;
+  }
+  .link:hover {
+    color: $contrast_colour;
+  }
 }
 
 
