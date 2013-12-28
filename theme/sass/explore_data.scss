@@ -1,37 +1,32 @@
 @import "bar";
 
-header {
-  margin-bottom: 14px;
+header.explore_data {
+
   .application_controls {
     // TODO: this looks a hack! Used to align the icons to the title!
     padding: 35px 0;
     text-align: center;
+    i {
+      opacity: 0.4;
+    }
+    i:hover {
+      opacity: 1;
+      color: $contrast_colour;
+    }
   }
-  i {
-    opacity: 0.4;
+  
+  .title {
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.8;
+    .year {
+      color: lighten($gold, 10%);
+    }
   }
-  i:hover {
-    opacity: 1;
-    color: $contrast_colour;
-  }
-  .year {
-    color: lighten($gold, 10%);
-  }
+
 }
 
-.title {
-  text-align: center;
-  text-transform: uppercase;
-  opacity: 0.8;
-}
 
-#year {
-  opacity: 0.9;
-  h1 {
-    font-family: "lato";
-    font-size: 5em;
-  }
-}
 
 #info_panel {
   #viz_controls {

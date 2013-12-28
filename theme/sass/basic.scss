@@ -26,8 +26,10 @@
 #explore_data {
   @include container($total-columns, $break);
   //@include susy-grid-background;
+  header.explore_data {height: 250px;}
 
   @include at-breakpoint($break) {
+    header.explore_data {height: 200px;}
     .application_controls {
       @include span-columns(1, $break);
     }
@@ -99,14 +101,8 @@ h4 {
   word-spacing: 0.09em;
   line-height: 1.4;
 }
-p.big { 
-  font-size:0.875em; /* 16x0.875=14 */ 
-  letter-spacing: 0.08em;
-  word-spacing: 0.09em;
-  line-height: 1.4;
-}
 p, li { 
-  font-size:0.75em;  /* 16x0.75=12 */ 
+  font-size:0.875em; /* 16x0.875=14 */ 
   letter-spacing: 0.08em;
   word-spacing: 0.09em;
   line-height: 1.4;
