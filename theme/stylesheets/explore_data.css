@@ -36,64 +36,99 @@ text {
   display: none;
 }
 
-/* line 4, ../sass/explore_data.scss */
-header.explore_data {
-  padding-bottom: 180px;
+/* line 3, ../sass/explore_data.scss */
+header {
+  margin-bottom: 14px;
 }
-
-/* line 9, ../sass/explore_data.scss */
+/* line 5, ../sass/explore_data.scss */
 header .application_controls {
   padding: 35px 0;
   text-align: center;
 }
-/* line 14, ../sass/explore_data.scss */
+/* line 10, ../sass/explore_data.scss */
 header i {
   opacity: 0.4;
 }
-/* line 17, ../sass/explore_data.scss */
+/* line 13, ../sass/explore_data.scss */
 header i:hover {
   opacity: 1;
   color: #d2d3e8;
 }
+/* line 17, ../sass/explore_data.scss */
+header .year {
+  color: #f79c00;
+}
 
-/* line 23, ../sass/explore_data.scss */
+/* line 22, ../sass/explore_data.scss */
 .title {
   text-align: center;
   text-transform: uppercase;
   opacity: 0.8;
 }
 
-/* line 29, ../sass/explore_data.scss */
+/* line 28, ../sass/explore_data.scss */
 #year {
   opacity: 0.9;
 }
-/* line 31, ../sass/explore_data.scss */
+/* line 30, ../sass/explore_data.scss */
 #year h1 {
   font-family: "lato";
   font-size: 5em;
 }
 
+/* line 37, ../sass/explore_data.scss */
+#info_panel #viz_controls {
+  padding: 0 0 25px 30px;
+}
 /* line 39, ../sass/explore_data.scss */
-#explore_data #viz_controls i.selected {
+#info_panel #viz_controls i.selected {
   color: #d2d3e8;
   opacity: 1;
 }
 /* line 43, ../sass/explore_data.scss */
-#explore_data #viz_controls i.active {
+#info_panel #viz_controls i.active {
   opacity: 0.4;
 }
 /* line 46, ../sass/explore_data.scss */
-#explore_data #viz_controls i.inactive {
+#info_panel #viz_controls i.inactive {
   opacity: 0.1;
 }
 /* line 49, ../sass/explore_data.scss */
-#explore_data #viz_controls i.active:hover {
+#info_panel #viz_controls i.active:hover {
   color: #d2d3e8;
   opacity: 0.8;
 }
-/* line 54, ../sass/explore_data.scss */
-#explore_data .controls {
+/* line 53, ../sass/explore_data.scss */
+#info_panel #viz_controls .controls {
   margin: 0.4em;
   cursor: pointer;
-  cursor: hand;
+}
+/* line 58, ../sass/explore_data.scss */
+#info_panel .help {
+  font-family: "Merriweather";
+  opacity: 0.9;
+  padding: 12px 42px;
+}
+/* line 62, ../sass/explore_data.scss */
+#info_panel .help i {
+  opacity: 0.4;
+  cursor: pointer;
+}
+/* line 66, ../sass/explore_data.scss */
+#info_panel .help i:hover {
+  opacity: 0.8;
+  color: #d2d3e8;
+}
+/* line 70, ../sass/explore_data.scss */
+#info_panel .help i.selected {
+  color: #d2d3e8;
+  opacity: 1;
+}
+/* line 74, ../sass/explore_data.scss */
+#info_panel .help ul {
+  padding-left: 14px;
+}
+/* line 77, ../sass/explore_data.scss */
+#info_panel .help li {
+  margin-bottom: 10px;
 }

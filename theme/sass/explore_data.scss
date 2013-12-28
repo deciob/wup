@@ -1,11 +1,7 @@
-
 @import "bar";
 
-header.explore_data {
-  padding-bottom: 180px;
-}
-
 header {
+  margin-bottom: 14px;
   .application_controls {
     // TODO: this looks a hack! Used to align the icons to the title!
     padding: 35px 0;
@@ -17,6 +13,9 @@ header {
   i:hover {
     opacity: 1;
     color: $contrast_colour;
+  }
+  .year {
+    color: lighten($gold, 10%);
   }
 }
 
@@ -34,8 +33,9 @@ header {
   }
 }
 
-#explore_data {
+#info_panel {
   #viz_controls {
+    padding: 0 0 25px 30px;
     i.selected {
       color: $contrast_colour;
       opacity: 1;
@@ -50,10 +50,33 @@ header {
       color: $contrast_colour;
       opacity: 0.8;
     }
+    .controls {
+      margin: 0.4em;
+      cursor: pointer;
+    }
   }
-  .controls {
-    margin: 0.4em;
-    cursor: pointer; 
-    cursor: hand;
+  .help {
+    font-family: "Merriweather";
+    opacity: 0.9;
+    padding: 12px 42px;
+    i {
+      opacity: 0.4;
+      cursor: pointer;
+    }
+    i:hover {
+      opacity: 0.8;
+      color: $contrast_colour;
+    }
+    i.selected {
+      color: $contrast_colour;
+      opacity: 1;
+    }
+    ul {
+      padding-left: 14px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
   }
+  
 }

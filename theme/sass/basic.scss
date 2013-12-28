@@ -26,10 +26,8 @@
 #explore_data {
   @include container($total-columns, $break);
   //@include susy-grid-background;
-  #year, #viz_controls {text-align: left;}
 
   @include at-breakpoint($break) {
-    #year, #viz_controls {text-align: right;}
     .application_controls {
       @include span-columns(1, $break);
     }
@@ -93,25 +91,25 @@ h3 {
   font-size:1.5em;   /* 16x1.5=24 */ 
   letter-spacing: 0.15em;
   word-spacing: 0.15em;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 h4 { 
   font-size:1.125em; /* 16x1.125=18 */ 
   letter-spacing: 0.08em;
   word-spacing: 0.09em;
-  line-height: 1.1;
+  line-height: 1.4;
 }
 p.big { 
   font-size:0.875em; /* 16x0.875=14 */ 
   letter-spacing: 0.08em;
   word-spacing: 0.09em;
-  line-height: 1.1;
+  line-height: 1.4;
 }
-p { 
+p, li { 
   font-size:0.75em;  /* 16x0.75=12 */ 
   letter-spacing: 0.08em;
   word-spacing: 0.09em;
-  line-height: 1.1;
+  line-height: 1.4;
 }
 a {
   color: white;
