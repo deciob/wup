@@ -36,6 +36,14 @@ define([
         return data_by_year[year - year_step];
       }
 
+      function handleClick (d, i) {
+        if ( d3.select(this).classed("active") ) {
+          d3.select(this).classed("active", false);
+        } else {
+          d3.select(this).classed("active", true);
+        }
+      }
+
       // TODO: rationalize chart/transition configs (also on nightcharts)
       selection = d3.select('#viz');
       barchart = chart.bar()
@@ -45,6 +53,7 @@ define([
         .duration(600)
         .step(600)
         .max(40)
+        .handleClick(handleClick)
         .xValue( function(d) { return d['agglomeration']; } )
         .yValue( function(d) { return d['population']; } )
         .orient( 'horizontal' );

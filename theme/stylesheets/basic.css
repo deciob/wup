@@ -199,7 +199,7 @@ a {
   opacity: 0.9;
 }
 
-/* line 2, ../sass/bar.scss */
+/* line 3, ../sass/bar.scss */
 svg {
   /*font-family: 'PT Mono', sans-serif;
   font-size: 1.5em;*/
@@ -208,12 +208,12 @@ svg {
   word-spacing: -0.3em;
 }
 
-/* line 10, ../sass/bar.scss */
+/* line 11, ../sass/bar.scss */
 text {
   fill: white;
 }
 
-/* line 16, ../sass/bar.scss */
+/* line 17, ../sass/bar.scss */
 .axis path,
 .axis line {
   fill: none;
@@ -221,18 +221,18 @@ text {
   shape-rendering: crispEdges;
 }
 
-/* line 22, ../sass/bar.scss */
+/* line 23, ../sass/bar.scss */
 .bar {
   fill: #efefef;
   fill-opacity: .9;
 }
 
-/* line 27, ../sass/bar.scss */
+/* line 28, ../sass/bar.scss */
 .bar.active {
-  fill: darkRed;
+  fill: #c47c00;
 }
 
-/* line 31, ../sass/bar.scss */
+/* line 32, ../sass/bar.scss */
 .x.axis path {
   display: none;
 }
@@ -248,46 +248,51 @@ header .application_controls {
   text-align: center;
 }
 /* line 14, ../sass/explore_data.scss */
+header i {
+  opacity: 0.4;
+}
+/* line 17, ../sass/explore_data.scss */
 header i:hover {
+  opacity: 1;
   color: #d2d3e8;
 }
 
-/* line 19, ../sass/explore_data.scss */
+/* line 23, ../sass/explore_data.scss */
 .title {
   text-align: center;
   text-transform: uppercase;
   opacity: 0.8;
 }
 
-/* line 25, ../sass/explore_data.scss */
+/* line 29, ../sass/explore_data.scss */
 #year {
   opacity: 0.9;
 }
-/* line 27, ../sass/explore_data.scss */
+/* line 31, ../sass/explore_data.scss */
 #year h1 {
   font-family: "lato";
   font-size: 5em;
 }
 
-/* line 35, ../sass/explore_data.scss */
+/* line 39, ../sass/explore_data.scss */
 #explore_data #viz_controls i.selected {
   color: #d2d3e8;
   opacity: 1;
 }
-/* line 39, ../sass/explore_data.scss */
+/* line 43, ../sass/explore_data.scss */
 #explore_data #viz_controls i.active {
   opacity: 0.4;
 }
-/* line 42, ../sass/explore_data.scss */
+/* line 46, ../sass/explore_data.scss */
 #explore_data #viz_controls i.inactive {
   opacity: 0.1;
 }
-/* line 45, ../sass/explore_data.scss */
+/* line 49, ../sass/explore_data.scss */
 #explore_data #viz_controls i.active:hover {
   color: #d2d3e8;
   opacity: 0.8;
 }
-/* line 50, ../sass/explore_data.scss */
+/* line 54, ../sass/explore_data.scss */
 #explore_data .controls {
   margin: 0.4em;
   cursor: pointer;

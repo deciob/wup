@@ -1,3 +1,4 @@
+@import "_colours";
 
 svg {
   /*font-family: 'PT Mono', sans-serif;
@@ -25,7 +26,7 @@ text {
 }
 
 .bar.active {
-  fill: darkRed;
+  fill: $gold; //darken($orange, 5%);
 }
 
 .x.axis path {

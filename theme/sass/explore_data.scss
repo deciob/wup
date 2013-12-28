@@ -11,7 +11,11 @@ header {
     padding: 35px 0;
     text-align: center;
   }
+  i {
+    opacity: 0.4;
+  }
   i:hover {
+    opacity: 1;
     color: $contrast_colour;
   }
 }
