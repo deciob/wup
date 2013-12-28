@@ -1,0 +1,14 @@
+{
+  "name": "backbone",
+  "_cacheHeaders": {
+    "ETag": "\"4dae6808b925ccef0779bbd0b12cc0ad\"",
+    "Content-Length": "60223",
+    "Content-Type": "text/plain; charset=utf-8",
+    "Content-Disposition": "inline"
+  },
+  "_release": "e-tag:4dae6808b",
+  "main": "index.js",
+  "_source": "https://raw.github.com/amdjs/backbone/1.1.0/backbone.js",
+  "_target": "*",
+  "_originalSource": "https://raw.github.com/amdjs/backbone/1.1.0/backbone.js"
+}
