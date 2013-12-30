@@ -71,7 +71,7 @@ html {
   .link {
     cursor: pointer;
   }
-  .link:hover {
+  .link:hover, a:hover {
     color: $contrast_colour;
   }
 }

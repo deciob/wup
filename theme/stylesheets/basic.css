@@ -115,7 +115,7 @@ html .link {
   cursor: pointer;
 }
 /* line 74, ../sass/basic.scss */
-html .link:hover {
+html .link:hover, html a:hover {
   color: #d2d3e8;
 }
 
