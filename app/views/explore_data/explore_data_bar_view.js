@@ -47,7 +47,7 @@ define([
       // TODO: rationalize chart/transition configs (also on nightcharts)
       selection = d3.select('#viz');
       barchart = chart.bar()
-        .margin({top: 10, right: 20, bottom: 20, left: 240})
+        .margin({top: 10, right: 20, bottom: 45, left: 240})
         .width(900)
         .height(700)
         .duration(600)
@@ -65,6 +65,13 @@ define([
         step: year_step
       };
       transition = new chart.TransitionTrain(transition_config);
+
+      // Append a label to the x axis.
+      d3.select('.x.axis').append("text")
+        .attr("y", 40)
+        .attr("x", 650)
+        .style("text-anchor", "end")
+        .text('Population (millions)');
 
       this.mediator.on('step_backward', function () {
         transition.dispatch.prev.call(transition);
