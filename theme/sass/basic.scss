@@ -74,6 +74,9 @@ html {
   .link:hover, a:hover {
     color: $contrast_colour;
   }
+  strong {
+    font-weight: bold;
+  }
 }
 
 

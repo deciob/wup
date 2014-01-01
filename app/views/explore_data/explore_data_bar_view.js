@@ -29,6 +29,9 @@ define([
       data_by_year = _.groupBy( data, function (obj) {
         return obj.year;
       });
+      //function sort (data) {
+      //  
+      //}
       function itHasNext (year) {
         return data_by_year[year + year_step];
       }
@@ -54,6 +57,7 @@ define([
         .step(600)
         .max(40)
         .handleClick(handleClick)
+        .invert_data(true)
         .xValue( function(d) { return d['agglomeration']; } )
         .yValue( function(d) { return d['population']; } )
         .orient( 'horizontal' );
