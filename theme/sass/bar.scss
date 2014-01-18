@@ -9,19 +9,19 @@ svg {
 }
 
 text {
-  fill: white;
+  fill: lighten($ni-grey, 10%);
   //fill-opacity: .9;
 }
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #fff;
+  stroke: #808080;//lighten($ni-grey, 40%);
   shape-rendering: crispEdges;
 }
 
 .bar {
-  fill: $cream;
+  fill: $greenish;
   fill-opacity: .9;
 }
 

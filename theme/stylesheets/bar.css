@@ -9,20 +9,20 @@ svg {
 
 /* line 11, ../sass/bar.scss */
 text {
-  fill: white;
+  fill: #343434;
 }
 
 /* line 17, ../sass/bar.scss */
 .axis path,
 .axis line {
   fill: none;
-  stroke: #fff;
+  stroke: #808080;
   shape-rendering: crispEdges;
 }
 
 /* line 23, ../sass/bar.scss */
 .bar {
-  fill: #efefef;
+  fill: #607534;
   fill-opacity: .9;
 }
 

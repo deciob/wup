@@ -65,8 +65,8 @@ html {
   -o-transition: opacity 1s ease;
   -ms-transition: opacity 1s ease;
 
-  background-color: $orange;
-  color: white;
+  background-color: $cream;
+  color: lighten($ni-grey, 10%);
 
   .link {
     cursor: pointer;
@@ -76,6 +76,10 @@ html {
   }
   strong {
     font-weight: bold;
+  }
+  .icon-hom {
+    color: $reddish;
+    opacity: 1;
   }
 }
 
@@ -111,7 +115,7 @@ p, li {
   line-height: 1.4;
 }
 a {
-  color: white;
+  color: $gold;
   text-decoration: none;
 }
 

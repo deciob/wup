@@ -9,20 +9,20 @@ svg {
 
 /* line 11, ../sass/bar.scss */
 text {
-  fill: white;
+  fill: #343434;
 }
 
 /* line 17, ../sass/bar.scss */
 .axis path,
 .axis line {
   fill: none;
-  stroke: #fff;
+  stroke: #808080;
   shape-rendering: crispEdges;
 }
 
 /* line 23, ../sass/bar.scss */
 .bar {
-  fill: #efefef;
+  fill: #607534;
   fill-opacity: .9;
 }
 
@@ -43,12 +43,12 @@ header.explore_data .application_controls {
 }
 /* line 9, ../sass/explore_data.scss */
 header.explore_data .application_controls i {
-  opacity: 0.4;
+  opacity: 0.8;
 }
 /* line 12, ../sass/explore_data.scss */
 header.explore_data .application_controls i:hover {
   opacity: 1;
-  color: #d2d3e8;
+  color: #8c0e03;
 }
 /* line 18, ../sass/explore_data.scss */
 header.explore_data .title {
@@ -58,62 +58,62 @@ header.explore_data .title {
 }
 /* line 22, ../sass/explore_data.scss */
 header.explore_data .title .year {
-  color: #f79c00;
+  color: #8c0e03;
 }
 
-/* line 32, ../sass/explore_data.scss */
+/* line 33, ../sass/explore_data.scss */
 #info_panel #viz_controls {
   padding: 0 0 25px 30px;
 }
-/* line 34, ../sass/explore_data.scss */
+/* line 35, ../sass/explore_data.scss */
 #info_panel #viz_controls i.selected {
-  color: #d2d3e8;
+  color: #8c0e03;
   opacity: 1;
 }
-/* line 38, ../sass/explore_data.scss */
+/* line 39, ../sass/explore_data.scss */
 #info_panel #viz_controls i.active {
   opacity: 0.4;
 }
-/* line 41, ../sass/explore_data.scss */
+/* line 42, ../sass/explore_data.scss */
 #info_panel #viz_controls i.inactive {
   opacity: 0.1;
 }
-/* line 44, ../sass/explore_data.scss */
+/* line 45, ../sass/explore_data.scss */
 #info_panel #viz_controls i.active:hover {
-  color: #d2d3e8;
+  color: #8c0e03;
   opacity: 0.8;
 }
-/* line 48, ../sass/explore_data.scss */
+/* line 49, ../sass/explore_data.scss */
 #info_panel #viz_controls .controls {
   margin: 0.4em;
   cursor: pointer;
 }
-/* line 53, ../sass/explore_data.scss */
+/* line 54, ../sass/explore_data.scss */
 #info_panel .help {
   font-family: "Merriweather";
   opacity: 0.9;
   padding: 12px 42px;
 }
-/* line 57, ../sass/explore_data.scss */
+/* line 58, ../sass/explore_data.scss */
 #info_panel .help i {
   opacity: 0.4;
   cursor: pointer;
 }
-/* line 61, ../sass/explore_data.scss */
+/* line 62, ../sass/explore_data.scss */
 #info_panel .help i:hover {
   opacity: 0.8;
-  color: #d2d3e8;
+  color: #8c0e03;
 }
-/* line 65, ../sass/explore_data.scss */
+/* line 66, ../sass/explore_data.scss */
 #info_panel .help i.selected {
-  color: #d2d3e8;
+  color: #8c0e03;
   opacity: 1;
 }
-/* line 69, ../sass/explore_data.scss */
+/* line 70, ../sass/explore_data.scss */
 #info_panel .help ul {
   padding-left: 14px;
 }
-/* line 72, ../sass/explore_data.scss */
+/* line 73, ../sass/explore_data.scss */
 #info_panel .help li {
   margin-bottom: 10px;
 }

@@ -7,7 +7,7 @@ header.explore_data {
     padding: 35px 0;
     text-align: center;
     i {
-      opacity: 0.4;
+      opacity: 0.8;
     }
     i:hover {
       opacity: 1;
@@ -20,7 +20,8 @@ header.explore_data {
     text-transform: uppercase;
     opacity: 0.8;
     .year {
-      color: lighten($gold, 10%);
+      //color: lighten($dark-lavender, 10%);
+      color: $reddish;
     }
   }
 
