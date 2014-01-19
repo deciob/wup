@@ -19,6 +19,9 @@ text {
   stroke: #808080;//lighten($ni-grey, 40%);
   shape-rendering: crispEdges;
 }
+.y.axis path, .y.axis line {
+  stroke: none;
+}
 
 .bar {
   fill: $greenish;

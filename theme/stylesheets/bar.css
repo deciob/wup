@@ -20,18 +20,23 @@ text {
   shape-rendering: crispEdges;
 }
 
-/* line 23, ../sass/bar.scss */
+/* line 22, ../sass/bar.scss */
+.y.axis path, .y.axis line {
+  stroke: none;
+}
+
+/* line 26, ../sass/bar.scss */
 .bar {
   fill: #607534;
   fill-opacity: .9;
 }
 
-/* line 28, ../sass/bar.scss */
+/* line 31, ../sass/bar.scss */
 .bar.active {
   fill: #c47c00;
 }
 
-/* line 32, ../sass/bar.scss */
+/* line 35, ../sass/bar.scss */
 .x.axis path {
   display: none;
 }
