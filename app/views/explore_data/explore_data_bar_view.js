@@ -52,7 +52,7 @@ define([
       barchart = chart.bar()
         .margin({top: 10, right: 20, bottom: 45, left: 240})
         .width(900)
-        .height(700)
+        .height(600)
         .duration(600)
         .max(40)
         .handleClick(handleClick)
