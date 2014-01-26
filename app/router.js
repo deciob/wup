@@ -2,13 +2,13 @@
   return define([
     'd3',
     'underscore',
-    'when', 
+    'jquery', 
     'backbone',
     'app/models/application_state',
     'app/views/base_view',
     'app/views/welcome_view',
     'app/views/explore_data/explore_data_view'
-  ], function(d3, _, when, Backbone, ApplicationState, BaseView, WelcomeView, ExploreDataView) {
+  ], function(d3, _, $, Backbone, ApplicationState, BaseView, WelcomeView, ExploreDataView) {
 
     return Backbone.Router.extend({
       routes: {
@@ -20,15 +20,13 @@
         
       },
       initialize: function(application_config) {
-        this.defer = when.defer();
-        this.promised_data = this.fetchData(application_config.data_path);
         this.application_state = new ApplicationState({
           year: application_config.initial_year});
         this.base_view = new BaseView();
         this.current_view = void 0;
         this.config = _.assign(application_config, {
           application_state: this.application_state,
-          promised_data: this.promised_data
+          promised_data: $.when( this.fetchData(application_config.data_path) )
         });
       },
       welcome: function () {
@@ -47,7 +45,8 @@
       },
 
       fetchData: function (data_path) {
-        var self = this;
+        var self = this,
+          dfd = new $.Deferred();
         function accessor(d) {
           // csv headers:
           // year,rank,country,agglomeration,population
@@ -60,9 +59,9 @@
           };
         }
         d3.csv(data_path, accessor , function(error, data) {
-          self.defer.resolve(data);
+          dfd.resolve(data);
         });
-        return this.defer.promise;
+        return dfd.promise();
       },
 
       removePrevView: function () {

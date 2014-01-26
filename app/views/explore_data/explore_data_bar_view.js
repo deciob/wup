@@ -22,7 +22,7 @@ define([
   
     render: function (data) {
       var self=this, data_by_year, selection, barchart, transition_config, 
-        transition, year_step=5;
+        drawBarchart, transition, year_step=5;
 
       // TODO: probably this data and related helpers would be better 
       // positioned inside a collection.
@@ -54,21 +54,25 @@ define([
         .width(900)
         .height(700)
         .duration(600)
-        .step(600)
         .max(40)
         .handleClick(handleClick)
         .invert_data(true)
         .xValue( function(d) { return d['agglomeration']; } )
         .yValue( function(d) { return d['population']; } )
         .orient( 'horizontal' );
+
+      // It returns a function that takes a data argument.
+      drawBarchart = chart.draw(barchart, selection);
+
       transition_config = {
-        selection: selection,
         data: data_by_year,
         chart: barchart,
-        position: this.application_state.get('year'),
-        step: year_step
+        drawChart: drawBarchart,
+        frame: this.application_state.get('year'),
+        delta: year_step,
+        step: 100
       };
-      transition = new chart.TransitionTrain(transition_config);
+      transition = new chart.Frame(transition_config);
 
       // Append a label to the x axis.
       d3.select('.x.axis').append("text")
@@ -95,14 +99,14 @@ define([
 
       transition.dispatch.on('at_beginning_of_transition.explore_data', 
        function() {
-        var year = transition.position;
+        var year = transition.frame;
         if ( self.application_state.get('year') !== year ) {
           self.application_state.set('year', year);
         }
       });
 
       transition.dispatch.on('end.explore_data', function() {
-        var year = transition.position,
+        var year = transition.frame,
           status = transition.state_machine.getStatus();
 
         if (status === 'in_pause') {

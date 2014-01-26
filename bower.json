@@ -2,16 +2,14 @@
 	"name": "my-awesome-cujoJS-app",
 	"version": "0.2.4",
 	"dependencies": {
-		"curl": "~0.8",
 		"when": "~2",
-		"meld": "~1",
 		"d3": "latest",
 		"backbone": "https://raw.github.com/amdjs/backbone/1.1.0/backbone.js",
 		"lodash": "latest",
-		"zepto": "latest"
+		"jquery": "latest",
+		"requirejs-text": "latest"
 	},
 	"ignore": [
 		"node_modules/"
-
 	]
 }
