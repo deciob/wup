@@ -1,9 +1,9 @@
 requirejs.config({
-  baseUrl: 'wup/',
+  baseUrl: 'wup/app/',
   paths: {
     d3: '../lib/d3/d3',
     jquery: '../lib/jquery/jquery',
-    chart: 'app/lib/nightcharts',
+    chart: 'lib/nightcharts',
     backbone: '../lib/backbone/index',
     underscore: '../lib/lodash/dist/lodash',
     text : "../lib/requirejs-text/text"
@@ -15,4 +15,4 @@ requirejs.config({
   }
 });
 
-requirejs(['app/main']);
+requirejs(['main']);
