@@ -1,7 +1,7 @@
 define([
   "jquery", 
   "backbone",
-  "router", 
+  "app/router", 
 ], function($, Backbone, Router) {
 
   return $(document).ready(function() {
