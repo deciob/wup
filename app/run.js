@@ -1,5 +1,5 @@
 requirejs.config({
-  baseUrl: 'wup/app/',
+  baseUrl: '/app/',
   paths: {
     d3: '../lib/d3/d3',
     jquery: '../lib/jquery/jquery',
