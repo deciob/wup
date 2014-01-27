@@ -22,7 +22,7 @@ define([
   
     render: function (data) {
       var self=this, data_by_year, selection, barchart, transition_config, 
-        drawBarchart, transition, year_step=5;
+        transition, year_step=5;
 
       // TODO: probably this data and related helpers would be better 
       // positioned inside a collection.
@@ -60,17 +60,13 @@ define([
         .xValue( function(d) { return d['agglomeration']; } )
         .yValue( function(d) { return d['population']; } )
         .orient( 'horizontal' );
-
-      // It returns a function that takes a data argument.
-      drawBarchart = chart.draw(barchart, selection);
-
       transition_config = {
+        drawChart: chart.draw(barchart, selection),
         data: data_by_year,
         chart: barchart,
-        drawChart: drawBarchart,
         frame: this.application_state.get('year'),
-        delta: year_step,
-        step: 100
+        step: 300,
+        delta: year_step
       };
       transition = new chart.Frame(transition_config);
 
